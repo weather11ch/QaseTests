@@ -7,23 +7,22 @@ using System.Threading.Tasks;
 
 namespace QaseTests.Tests
 {
-    internal class OpenPageTests : BasePageTests
-    {
+    internal class ProjectPageTests : BasePageTests
+    {        
         [Test]
-        public void OpenPageTest()
-        {
-
-        }
-        [Test]
-        public void AuthorizationTest() 
-        {
-            BasePage.Authorization();
-        }
-        [Test]
-        public void OpenProjectTest() 
+        public void OpenProjectPageTest() 
         {
             ProjectPage.OpenProjectPage();
         }
-
+        [Test]
+        public void CreateNewProjectTest()
+        {
+            ProjectPage.OpenProjectPage();
+        }
+        [Test]
+        public void OpenDemoProjectTest()
+        {
+            ProjectPage.OpenProjectPage();
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using QaseTests.Factories;
+﻿using OpenQA.Selenium;
+using QaseTests.Factories;
+using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,13 @@ namespace QaseTests.Pages
             Driver.GetDriver().Navigate().GoToUrl("https://app.qase.io/projects");
 
             Driver.GetDriver().Manage().Window.Maximize();
+            signIn = Driver.WaitDriver(driver, 30).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"application-content\"]/div/h1")));
+            signIn.Click();
+        }
+        public static void OpenDemoProject() 
+        { 
+        demoProjectElement = Driver.WaitDriver(driver, 30).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"application-content\"]/div/table/tbody/tr[1]/td[3]/div/div/a")));
+        demoProjectElement.Click();
         }
     }
 }
