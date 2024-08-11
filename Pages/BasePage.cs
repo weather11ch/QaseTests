@@ -11,9 +11,10 @@ namespace QaseTests.Pages
         protected static IWebDriver driver = Driver.GetDriver();
         protected static WebDriverWait wait = Driver.WaitDriver(driver, 30);
 
-        public static void OpenMainPage()
+        public static void OpenPage(string url)
         {
-            Driver.GetDriver().Navigate().GoToUrl("https://app.qase.io/");
+            Driver.GetDriver().Navigate().GoToUrl($"{url}");
+            //Driver.GetDriver().PageSource.
 
             Driver.GetDriver().Manage().Window.Maximize();
         }

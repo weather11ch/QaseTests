@@ -22,7 +22,10 @@ namespace QaseTests.Pages
         public static void OpenDemoProject() 
         { 
         demoProjectElement = Driver.WaitDriver(driver, 30).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"application-content\"]/div/table/tbody/tr[1]/td[3]/div/div/a")));
+        
         demoProjectElement.Click();
+
+        demoProjectPageElement = Driver.WaitDriver(driver, 30).Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"application-content\"]/div/div[1]/h1")));
         }
     }
 }

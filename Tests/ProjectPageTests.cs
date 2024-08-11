@@ -22,7 +22,8 @@ namespace QaseTests.Tests
         [Test]
         public void OpenDemoProjectTest()
         {
-            ProjectPage.OpenProjectPage();
+            ProjectPage.OpenDemoProject();
+            Thread.Sleep(5000);
         }
     }
 }

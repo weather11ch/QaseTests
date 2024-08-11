@@ -14,5 +14,6 @@ namespace QaseTests.Pages
         public static IWebElement signIn;
         public static IWebElement projectPageElement;
         public static IWebElement demoProjectElement;
+        public static IWebElement demoProjectPageElement;
     }
 }
